@@ -16,8 +16,14 @@
 ;;;tabの補完
 ;;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 
-
-
+; Undo を Ctr+z でもできるようにする
+(global-set-key "\C-z" 'undo)
+; 起動時の画面はいらない
+(setq inhibit-startup-message t)
+; 言語を日本語にする
+(set-language-environment 'Japanese)
+; UTF-8とする
+(prefer-coding-system 'utf-8)
 
 ;;;行番号表示
 (require 'linum)
